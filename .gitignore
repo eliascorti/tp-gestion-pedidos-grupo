@@ -1,0 +1,70 @@
+# Dependencias (se instalan con npm ci)
+node_modules/
+
+# Archivos generados por Expo
+.expo/
+.expo-shared/
+dist/
+dist-android/
+dist-ios/
+web-build/
+expo-env.d.ts
+
+# Archivos nativos y certificados
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Caché de Metro y otras herramientas
+.metro-health-check*
+.cache/
+.eslintcache
+
+# Registros de errores
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+*.log
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.pem
+
+# Configuración privada del entorno (permitir una plantilla de ejemplo)
+.env
+.env.*
+!.env.example
+
+# Caché de TypeScript
+*.tsbuildinfo
+
+# Plantilla original de Expo, conservada solo como referencia local
+/app-example/
+
+# Imágenes de ejemplo de la plantilla que no usa esta app
+/assets/images/*react-logo*.png
+
+# Captura auxiliar de la revisión local
+/docs/capturas/06-crud-validado.png
+
+# Carpetas nativas generadas por Expo
+/ios/
+/android/
+
+# Configuración personal del editor y asistentes
+/.vscode/
+/.idea/
+/.claude/
+/AGENTS.md
+/CLAUDE.md
+
+# Archivos temporales y copias de respaldo
+*.tmp
+*.bak
+*~
