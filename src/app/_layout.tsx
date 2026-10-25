@@ -1,6 +1,7 @@
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { PedidosProvider } from "../context/pedidos-context";
 import { colores } from "../constants/colores";
 import { estilos as s } from "../constants/estilos";
 
@@ -9,6 +10,7 @@ export const unstable_settings = { initialRouteName: "(tabs)" };
 export default function Layout() {
   return (
     <SafeAreaView edges={["top", "bottom"]} style={s.pantalla}>
+      <PedidosProvider>
         <Stack
           screenOptions={{
             headerStyle: s.encabezado,
@@ -32,6 +34,7 @@ export default function Layout() {
           <Stack.Screen name="cliente/[id]" options={{ title: "Cliente" }} />
         </Stack>
         <StatusBar style="dark" />
+      </PedidosProvider>
     </SafeAreaView>
   );
 }

@@ -9,18 +9,18 @@ Esta es una base para incorporar por módulos el proyecto ya preparado con ayuda
 
 ## Antes de empezar
 
-Elías publica la base. Integra primero su módulo de datos en main. Recién después los compañeros crean una carpeta de trabajo mediante git clone y pasan a las ramas que ya están creadas.
+El módulo de datos de Elías ya está incorporado directamente en main. Los compañeros pueden clonar el repositorio y pasar a las ramas de catálogo, pedidos y formulario, creadas desde esta base compartida.
 
-Las ramas de los compañeros deben partir del main que ya tiene los datos. Si Elías acaba de integrar su parte, cada compañero ejecuta git fetch origin y git merge origin/main en su rama antes de copiar su ZIP.
+Las tres ramas parten del main con los datos compartidos. Cada compañero ejecuta git fetch origin y git checkout con el nombre de su rama antes de copiar su ZIP. Si ya tenía una rama anterior con su nombre, debe usar la nueva rama por funcionalidad.
 
 ## Reparto
 
 | Persona | Rama | Qué incorpora |
 | --- | --- | --- |
-| Elías | feature/elias-datos | Tipos, servicios, cálculos, hook, Context y layout con Provider |
-| Joaquin | feature/joaquin-catalogo | Tarjeta de producto y catálogo |
-| Tadeo | feature/tadeo-pedidos | Tarjeta, listado y detalle de pedido, ficha del cliente |
-| Marco | feature/marco-formulario | Selector de cantidad, formulario, rutas de alta y edición |
+| Elías | main | Tipos, servicios, cálculos, hook, Context y layout con Provider |
+| Joaquin | feature/catalogo | Tarjeta de producto y catálogo |
+| Tadeo | feature/pedidos | Tarjeta, listado y detalle de pedido, ficha del cliente |
+| Marco | feature/formulario | Selector de cantidad, formulario, rutas de alta y edición |
 
 ## Cómo usar un ZIP de una parte
 
@@ -37,7 +37,7 @@ Los archivos LEEME de los ZIP son instrucciones, no hace falta copiarlos al proy
 
 ## Dependencias entre módulos
 
-Primero se integra Elías; después Joaquin y Tadeo; al final Marco. El formulario de Marco utiliza TarjetaProducto del módulo de Joaquin. Los botones de alta y edición se completan al integrar Marco. Antes de integrar todas las partes, las pantallas o componentes que dependen de otros módulos pueden seguir pendientes.
+Los datos de Elías ya están integrados. Después se integran Joaquin y Tadeo; al final Marco. El formulario de Marco utiliza TarjetaProducto del módulo de Joaquin. Los botones de alta y edición se completan al integrar Marco. Antes de integrar todas las partes, las pantallas o componentes que dependen de otros módulos pueden seguir pendientes.
 
 Se pueden subir ramas por separado aunque el resultado completo todavía no esté integrado. No confundir un commit intermedio con una app lista para entregar.
 
@@ -55,13 +55,14 @@ No se agregaron tests ni se ejecutaron chequeos de código al preparar estos paq
 ## Integración a cargo de Elías
 
 En GitHub, agregar a los compañeros como colaboradores desde Settings > Collaborators. Cada uno debe aceptar la invitación y usar su propia cuenta Git/GitHub.
-Integrar los Pull Requests en orden: datos, catálogo, pedidos, formulario. Si GitHub muestra conflictos, revisar los archivos antes de confirmar el merge.
+Integrar los Pull Requests en orden: catálogo, pedidos y formulario. Los datos ya están en main. Si GitHub muestra conflictos, revisar los archivos antes de confirmar el merge.
 main empieza con la base y se completa con los merges. No subir el ZIP de referencia completo a main porque dejaría sin cambios que incorporar a las otras ramas.
 
 ## Archivos de los paquetes
 
 - 00-base-comun.zip: instantánea de la base, sin historial Git. Elías puede usarla como respaldo; los compañeros deben clonar el repositorio.
-- 01 a 04: archivos asignados por integrante e instrucciones individuales.
+- 01: respaldo del módulo de datos de Elías, ya incorporado en main; no hay que volver a subirlo.
+- 02 a 04: archivos de los compañeros e instrucciones individuales.
 - 05-proyecto-completo-referencia.zip: proyecto original terminado, sin dependencias ni historial Git. Sirve para consultar cómo deben quedar las partes integradas.
 
 Después de integrar todo, completar el README final con instrucciones, sección de IA y capturas, tomando como referencia el proyecto original. Cada integrante debe poder explicar también el recorrido general de la app.
